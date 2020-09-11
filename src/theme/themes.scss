@@ -1,0 +1,39 @@
+@import "~@angular/material/theming";
+
+@include mat-core();
+
+//GLOBAL WARN
+$app-warn: mat-palette($mat-red, 900);
+
+//LIGHT THEME
+$library-app-primary: mat-palette($mat-blue-grey, 700);
+$library-app-accent: mat-palette($mat-teal, 700);
+
+$library-app-theme: mat-light-theme(
+  (
+    color: (
+      primary: $library-app-primary,
+      accent: $library-app-accent,
+      warn: $app-warn,
+    ),
+  )
+);
+
+// DARK THEME
+$dark-primary: mat-palette($mat-grey, 900);
+$dark-accent: mat-palette($mat-deep-orange, 700, 800, 900);
+$dark-theme: mat-dark-theme(
+  (
+    color: (
+      primary: $dark-primary,
+      accent: $dark-accent,
+      warn: $app-warn,
+    ),
+  )
+);
+
+@include angular-material-theme($library-app-theme);
+
+.unicorn-dark-theme {
+  @include angular-material-color($dark-theme);
+}
