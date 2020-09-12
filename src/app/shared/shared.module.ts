@@ -7,9 +7,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
-  declarations: [NavbarComponent],
+  declarations: [NavbarComponent, CarouselComponent],
   imports: [
     CommonModule,
     LayoutModule,
@@ -18,7 +20,8 @@ import { MatListModule } from '@angular/material/list';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    MatSlideToggleModule,
   ],
-  exports: [NavbarComponent],
+  exports: [NavbarComponent, CarouselComponent],
 })
 export class SharedModule {}
