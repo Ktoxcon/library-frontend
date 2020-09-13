@@ -1,4 +1,10 @@
 .container {
   display: flex;
+  justify-content: space-evenly;
   margin: 5em;
+  border: 1px solid black;
+}
+
+.card {
+  margin: 1.5em;
 }
