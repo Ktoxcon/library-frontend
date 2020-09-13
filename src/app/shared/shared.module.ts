@@ -9,9 +9,17 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { CarouselComponent } from './carousel/carousel.component';
+import { FooterComponent } from './footer/footer.component';
+import { CardComponent } from './card/card.component';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
-  declarations: [NavbarComponent, CarouselComponent],
+  declarations: [
+    NavbarComponent,
+    CarouselComponent,
+    FooterComponent,
+    CardComponent,
+  ],
   imports: [
     CommonModule,
     LayoutModule,
@@ -21,7 +29,8 @@ import { CarouselComponent } from './carousel/carousel.component';
     MatIconModule,
     MatListModule,
     MatSlideToggleModule,
+    MatCardModule,
   ],
-  exports: [NavbarComponent, CarouselComponent],
+  exports: [NavbarComponent, CarouselComponent, FooterComponent, CardComponent],
 })
 export class SharedModule {}
