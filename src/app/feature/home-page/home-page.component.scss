@@ -2,9 +2,21 @@
   display: flex;
   justify-content: space-evenly;
   margin: 5em;
-  border: 1px solid black;
 }
 
 .card {
   margin: 1.5em;
+}
+
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column;
+    margin: 0;
+    padding-bottom: 3em;
+  }
+
+  .card {
+    width: 100%;
+    margin: 2em 0;
+  }
 }
