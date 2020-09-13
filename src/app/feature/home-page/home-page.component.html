@@ -1,0 +1,12 @@
+<app-carousel></app-carousel>
+<div class="container" *ngFor="let card of cards">
+  <app-card
+    [title]="card.title"
+    [subtitle]="card.subtitle"
+    [imgUrl]="card.imgUrl"
+    [alt]="card.alt"
+    [content]="card.content"
+  >
+  </app-card>
+</div>
+<app-footer></app-footer>
