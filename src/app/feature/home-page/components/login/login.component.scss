@@ -1,0 +1,29 @@
+.container {
+  margin: 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.signUp-title {
+  font-size: 2em;
+}
+
+.input {
+  width: 100%;
+}
+
+.footer {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+}
+
+.inputs-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 3em;
+  padding: 4em 2.8em;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
