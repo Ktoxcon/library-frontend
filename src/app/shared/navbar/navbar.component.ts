@@ -18,9 +18,13 @@ export class NavbarComponent {
       shareReplay()
     );
 
-  sections = [
-    { name: 'Inicio', link: '#', icon: 'home' },
-    { name: 'Ingresar', link: '#', icon: 'login' },
-    { name: 'Acerca De', link: '#', icon: 'info' },
+  defaultSections = [
+    { name: 'Inicio', link: '', icon: 'home' },
+    { name: 'Ingresar', link: 'login', icon: 'login' },
+    { name: 'Acerca De', link: 'about', icon: 'info' },
   ];
+
+  getToolbarItems(): Array<any> {
+    return this.defaultSections;
+  }
 }

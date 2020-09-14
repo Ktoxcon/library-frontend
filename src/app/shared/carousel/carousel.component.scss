@@ -6,30 +6,3 @@
   min-width: 100%;
   height: 480px;
 }
-
-.start-container {
-  color: #eeeeee;
-  position: absolute;
-  text-align: center;
-  left: 50%;
-  top: 38%;
-  transform: translate(-50%, -38%);
-}
-
-.title {
-  font-weight: bold;
-  font-size: 4.75rem;
-  margin-bottom: 0.5em;
-}
-
-@media (max-width: 400px) {
-  .title {
-    font-size: 3.75rem;
-  }
-}
-
-@media (max-width: 280px) {
-  .title {
-    font-size: 2.75rem;
-  }
-}
