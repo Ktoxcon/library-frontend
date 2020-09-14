@@ -1,4 +1,8 @@
-<app-carousel></app-carousel>
+<app-carousel> </app-carousel>
+<div class="start-container">
+  <h1 class="title">Bienvenido</h1>
+  <button mat-raised-button color="accent" (click)="signUp()">Comenzar</button>
+</div>
 <div class="container">
   <app-card
     class="card"
@@ -10,5 +14,6 @@
     [content]="card.content"
   >
   </app-card>
+  <router-outlet></router-outlet>
 </div>
 <app-footer></app-footer>
