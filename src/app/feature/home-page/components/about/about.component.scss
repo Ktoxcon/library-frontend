@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5em;
+  padding: 1.5em;
+  border-radius: 1em;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  max-width: 50%;
+}
+
+.image-container {
+  border-radius: 2.5em;
+}
+
+.image-container img {
+  border-radius: inherit;
+  max-width: 100%;
+}
+
+.text-container {
+  padding: 2.25em;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.footer {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+}
+
+@media (max-width: 650px) {
+  .container {
+    flex-direction: column;
+    margin: 0.5em;
+    padding: 1.8em;
+    max-width: 100%;
+  }
+
+  .text-container {
+    padding: 1.75em;
+  }
+}
