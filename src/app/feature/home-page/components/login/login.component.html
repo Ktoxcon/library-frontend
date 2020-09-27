@@ -1,43 +1,42 @@
-<div class="container">
-  <div class="inputs-container">
-    <h3 class="signUp-title">Iniciar Sesión</h3>
-    <mat-form-field appearance="outline">
-      <mat-label>Usuario</mat-label>
-      <input
-        matInput
-        [value]="user"
-        (input)="handleUserChange($event.target.value)"
-        type="text"
-        class="input"
-      />
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-      <mat-label>Contraseña</mat-label>
-      <input
-        class="input"
-        [value]="password"
-        matInput
-        (input)="handlePasswordChange($event.target.value)"
-        [type]="hide ? 'password' : 'text'"
-      />
-      <button
-        mat-icon-button
-        matSuffix
-        (click)="hide = !hide"
-        [attr.aria-label]="'Hide password'"
-        [attr.aria-pressed]="hide"
-      >
-        <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+<home-navbar>
+  <div class="container">
+    <div class="inputs-container">
+      <h3 class="signUp-title">Iniciar Sesión</h3>
+      <mat-form-field appearance="outline">
+        <mat-label>Usuario</mat-label>
+        <input
+          matInput
+          [value]="userInput"
+          [(ngModel)]="userInput"
+          type="text"
+          class="input"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Contraseña</mat-label>
+        <input
+          class="input"
+          [value]="passwordInput"
+          matInput
+          [(ngModel)]="passwordInput"
+          (keyup.enter)="signIn()"
+          [type]="hide ? 'password' : 'text'"
+        />
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="hide = !hide"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide"
+        >
+          <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+        </button>
+      </mat-form-field>
+      <button mat-raised-button color="accent" (click)="signIn()">
+        Ingresar
       </button>
-    </mat-form-field>
-    <button
-      mat-raised-button
-      color="accent"
-      [disabled]="userInput && passwordInput ? false : true"
-    >
-      Ingresar
-    </button>
-  </div>
+    </div>
 
-  <app-footer class="footer"></app-footer>
-</div>
+    <app-footer class="footer"></app-footer>
+  </div>
+</home-navbar>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from 'src/app/core/services/Authentication/authentication.service';
 
 @Component({
   selector: 'app-login',
@@ -6,25 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  constructor() {}
+  constructor(private auth: AuthenticationService) {}
 
   ngOnInit(): void {}
 
   hide: boolean = true;
-  user: string = '';
-  password: string = '';
-  userInput: boolean = false;
-  passwordInput: boolean = false;
 
-  handleUserChange(userName: string): void {
-    if (userName !== '') {
-      this.userInput = true;
-    }
-  }
+  userInput: string = '';
+  passwordInput: string = '';
 
-  handlePasswordChange(password: string): void {
-    if (password !== '') {
-      this.passwordInput = true;
-    }
+  signIn(): void {
+    this.auth.signIn(this.userInput, this.passwordInput);
   }
 }
