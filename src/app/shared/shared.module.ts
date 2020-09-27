@@ -1,29 +1,23 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule } from '@angular/material/toolbar';
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
-import { RouterModule } from '@angular/router';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatTabsModule } from '@angular/material/tabs';
+import { RouterModule } from '@angular/router';
+import { CardComponent } from './card/card.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { FooterComponent } from './footer/footer.component';
-import { CardComponent } from './card/card.component';
-import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
-  declarations: [
-    NavbarComponent,
-    CarouselComponent,
-    FooterComponent,
-    CardComponent,
-  ],
+  declarations: [CarouselComponent, FooterComponent, CardComponent],
   imports: [
     CommonModule,
     LayoutModule,
@@ -36,10 +30,10 @@ import { NavbarComponent } from './navbar/navbar.component';
     MatCardModule,
     MatInputModule,
     MatFormFieldModule,
+    MatTabsModule,
     RouterModule,
   ],
   exports: [
-    NavbarComponent,
     CarouselComponent,
     FooterComponent,
     CardComponent,
@@ -53,6 +47,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     MatCardModule,
     MatInputModule,
     MatFormFieldModule,
+    MatTabsModule,
     RouterModule,
   ],
 })
